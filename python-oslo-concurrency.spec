@@ -59,7 +59,7 @@ rm -fr %{buildroot}%{python2_sitelib}/%{pypi_name}/tests/
 %files
 %doc README.rst LICENSE
 %{_bindir}/lockutils-wrapper
-%{python2_sitelib}/oslo
+%{python2_sitelib}/oslo_concurrency
 %{python2_sitelib}/*.egg-info
 %{python2_sitelib}/*-nspkg.pth
 
