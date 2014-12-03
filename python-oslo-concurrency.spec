@@ -21,6 +21,7 @@ Requires:       python-oslo-config
 Requires:       python-oslo-i18n
 Requires:       python-oslo-utils
 Requires:       python-posix_ipc
+Requires:       python-retrying
 Requires:       python-six
 
 %description
