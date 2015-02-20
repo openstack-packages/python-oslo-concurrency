@@ -3,7 +3,7 @@
 
 Name:           python-oslo-concurrency
 Version:        1.4.1
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        oslo.concurrency library
 
 License:        ASL 2.0
@@ -15,6 +15,17 @@ BuildRequires:  python2-devel
 BuildRequires:  python-pbr
 BuildRequires:  python-sphinx
 BuildRequires:  python-oslo-sphinx
+
+Requires: python-pbr
+Requires: python-babel
+Requires: python-iso8601
+Requires: python-fixtures
+Requires: python-oslo-config
+Requires: python-oslo-i18n
+Requires: python-oslo-utils
+Requires: python-posix_ipc
+Requires: python-six
+Requires: python-retrying
 
 %description
 Oslo concurrency library has utilities for safely running multi-thread,
@@ -43,7 +54,7 @@ rm -rf html/.{doctrees,buildinfo}
 
 %install
 %{__python2} setup.py install --skip-build --root %{buildroot}
-
+cp -r oslo_concurrency/openstack %{buildroot}%{python2_sitelib}/oslo_concurrency
 
 
 %files
@@ -56,5 +67,9 @@ rm -rf html/.{doctrees,buildinfo}
 %{_bindir}/lockutils-wrapper
 
 %changelog
+* Fri Feb 20 2015 Matthias Runge <mrunge@redhat.com> - 1.4.1-2
+- added openstack/common/fileutils.py
+- added dependencies
+
 * Wed Jan 28 2015 Matthias Runge <mrunge@redhat.com> - 1.4.1-1
 - Initial package (rhbz#1186826)
