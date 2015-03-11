@@ -2,8 +2,8 @@
 %global pypi_name oslo.concurrency
 
 Name:           python-oslo-concurrency
-Version:        1.4.1
-Release:        2%{?dist}
+Version:        1.6.0
+Release:        1%{?dist}
 Summary:        oslo.concurrency library
 
 License:        ASL 2.0
@@ -54,7 +54,6 @@ rm -rf html/.{doctrees,buildinfo}
 
 %install
 %{__python2} setup.py install --skip-build --root %{buildroot}
-cp -r oslo_concurrency/openstack %{buildroot}%{python2_sitelib}/oslo_concurrency
 
 
 %files
@@ -67,6 +66,9 @@ cp -r oslo_concurrency/openstack %{buildroot}%{python2_sitelib}/oslo_concurrency
 %{_bindir}/lockutils-wrapper
 
 %changelog
+* Wed Mar 11 2015 Matthias Runge <mrunge@redhat.com> - 1.6.0-1
+- upgrade to 1.6.0
+
 * Fri Feb 20 2015 Matthias Runge <mrunge@redhat.com> - 1.4.1-2
 - added openstack/common/fileutils.py
 - added dependencies
