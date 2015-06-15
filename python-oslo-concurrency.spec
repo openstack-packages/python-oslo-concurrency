@@ -23,6 +23,7 @@ Requires:       python-oslo-utils
 Requires:       python-posix_ipc
 Requires:       python-retrying
 Requires:       python-six
+Requires:       python-fasteners
 
 %description
 An OpenStack library for concurrency.
