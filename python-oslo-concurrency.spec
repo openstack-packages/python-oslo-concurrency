@@ -3,7 +3,7 @@
 
 Name:           python-oslo-concurrency
 Version:        1.8.0
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        OpenStack Oslo concurrency library
 
 License:        ASL 2.0
@@ -73,6 +73,9 @@ rm -fr %{buildroot}%{python2_sitelib}/oslo_concurrency/tests/
 %doc html
 
 %changelog
+* Thu Jun 18 2015 Fedora Release Engineering <rel-eng@lists.fedoraproject.org> - 1.8.0-2
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_23_Mass_Rebuild
+
 * Wed Apr 01 2015 Alan Pevec <apevec@redhat.com> - 1.8.0-1
 - update to 1.8.0
 
