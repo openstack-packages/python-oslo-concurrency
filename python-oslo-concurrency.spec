@@ -4,7 +4,7 @@
 Name:           python-oslo-concurrency
 Version:        XXX
 Release:        XXX
-Summary:        OpenStack oslo.concurrency library
+Summary:        OpenStack Oslo concurrency library
 
 License:        ASL 2.0
 URL:            https://launchpad.net/oslo
@@ -26,7 +26,9 @@ Requires:       python-six
 Requires:       python-fasteners
 
 %description
-An OpenStack library for concurrency.
+Oslo concurrency library has utilities for safely running multi-thread,
+multi-process applications using locking mechanisms and for running
+external processes.
 
 %package doc
 Summary:    Documentation for the Oslo concurrency library
@@ -63,13 +65,15 @@ rm -rf html/.{doctrees,buildinfo}
 rm -fr %{buildroot}%{python2_sitelib}/%{pypi_name}/tests/
 
 %files
-%doc README.rst LICENSE
+%doc README.rst
+%license LICENSE
 %{_bindir}/lockutils-wrapper
 %{python2_sitelib}/oslo_concurrency
 %{python2_sitelib}/*.egg-info
 
 %files doc
-%doc html LICENSE
+%license LICENSE
+%doc html
 
 
 %changelog
