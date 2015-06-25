@@ -38,8 +38,7 @@ BuildRequires:  python-sphinx
 BuildRequires:  python-oslo-sphinx
 BuildRequires:  python-fixtures
 BuildRequires:  python-oslo-utils
-# TODO: Uncomment once python-fasteners reviewed and packaged
-# BuildRequires: python-fasteners
+BuildRequires:  python-fasteners
 
 %description doc
 Documentation for the Oslo concurrency library.
