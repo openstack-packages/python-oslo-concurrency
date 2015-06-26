@@ -1,9 +1,9 @@
-# Created by pyp2rpm-1.1.2
 %global pypi_name oslo.concurrency
+%global pkg_name oslo-concurrency
 
 Name:           python-oslo-concurrency
-Version:        1.8.0
-Release:        2%{?dist}
+Version:        2.1.0
+Release:        1%{?dist}
 Summary:        OpenStack Oslo concurrency library
 
 License:        ASL 2.0
@@ -16,14 +16,14 @@ BuildRequires:  python-pbr
 
 Requires:       python-babel
 Requires:       python-iso8601
+Requires:       python-fixtures
 Requires:       python-oslo-config
 Requires:       python-oslo-i18n
 Requires:       python-oslo-utils
 Requires:       python-posix_ipc
 Requires:       python-retrying
 Requires:       python-six
-# FIXME exported testing infra which should be sub-packaged
-Requires:       python-fixtures
+Requires:       python-fasteners
 
 %description
 Oslo concurrency library has utilities for safely running multi-thread,
@@ -35,7 +35,10 @@ Summary:    Documentation for the Oslo concurrency library
 Group:      Documentation
 
 BuildRequires:  python-sphinx
-BuildRequires:  python-oslo-sphinx >= 2.5.0
+BuildRequires:  python-oslo-sphinx
+BuildRequires:  python-fixtures
+BuildRequires:  python-oslo-utils
+BuildRequires:  python-fasteners
 
 %description doc
 Documentation for the Oslo concurrency library.
@@ -57,22 +60,23 @@ rm -rf html/.{doctrees,buildinfo}
 %{__python2} setup.py install --skip-build --root %{buildroot}
 
 #delete tests
-rm -fr %{buildroot}%{python2_sitelib}/oslo_concurrency/tests/
+rm -fr %{buildroot}%{python2_sitelib}/%{pypi_name}/tests/
 
 %files
 %doc README.rst
 %license LICENSE
-%{python2_sitelib}/oslo_concurrency
-%{python2_sitelib}/oslo
-%{python2_sitelib}/%{pypi_name}-%{version}-py?.?-*.pth
-%{python2_sitelib}/%{pypi_name}-%{version}-py?.?.egg-info
 %{_bindir}/lockutils-wrapper
+%{python2_sitelib}/oslo_concurrency
+%{python2_sitelib}/*.egg-info
 
 %files doc
 %license LICENSE
 %doc html
 
 %changelog
+* Fri Jun 26 2015 Alan Pevec <alan.pevec@redhat.com> 2.1.0-1
+- Update to upstream 2.1.0
+
 * Thu Jun 18 2015 Fedora Release Engineering <rel-eng@lists.fedoraproject.org> - 1.8.0-2
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_23_Mass_Rebuild
 
