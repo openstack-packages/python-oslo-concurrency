@@ -24,6 +24,7 @@ Requires:       python-posix_ipc
 Requires:       python-retrying
 Requires:       python-six
 Requires:       python-fasteners
+Requires:       python-enum
 
 %description
 Oslo concurrency library has utilities for safely running multi-thread,
