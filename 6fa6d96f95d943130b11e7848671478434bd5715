@@ -1,0 +1,7 @@
+Code-Review+2: Haïkel Guémar <haikel.guemar@gmail.com>
+Verified+1: rdo-ci-jenkins <whayutin+rdocijenkins@redhat.com>
+Submitted-by: Dan Prince <dprince@redhat.com>
+Submitted-at: Fri, 18 Sep 2015 22:13:15 +0200
+Reviewed-on: https://review.gerrithub.io/247005
+Project: openstack-packages/python-oslo-concurrency
+Branch: refs/heads/rpm-master
