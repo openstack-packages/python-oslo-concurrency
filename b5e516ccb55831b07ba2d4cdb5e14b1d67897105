@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5ac4a560_c4a0eca1",
+        "filename": "python-oslo-concurrency.spec",
+        "patchSetId": 3
+      },
+      "lineNbr": 65,
+      "author": {
+        "id": 1002601
+      },
+      "writtenOn": "2015-12-14T22:20:06Z",
+      "side": 1,
+      "message": "Should requires python-%{pkg_name} \u003d %{version}-%{release}",
+      "revId": "b5e516ccb55831b07ba2d4cdb5e14b1d67897105",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    }
+  ]
+}
