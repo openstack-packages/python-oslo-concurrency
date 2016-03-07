@@ -30,6 +30,7 @@ BuildRequires:  python-coverage
 BuildRequires:  python-futures
 BuildRequires:  python-fixtures
 BuildRequires:  python-enum34
+BuildRequires:  python-eventlet
 
 Requires:       python-babel
 Requires:       python-iso8601
@@ -86,6 +87,7 @@ BuildRequires:  python3-hacking
 BuildRequires:  python3-oslotest
 BuildRequires:  python3-coverage
 BuildRequires:  python3-fixtures
+BuildRequires:  python3-eventlet
 
 Requires:       python3-babel
 Requires:       python3-iso8601
