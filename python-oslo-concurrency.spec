@@ -8,8 +8,8 @@
 %global pkg_name oslo-concurrency
 
 Name:           python-oslo-concurrency
-Version:        XXX
-Release:        XXX
+Version:        3.6.0
+Release:        1%{?dist}
 Summary:        OpenStack Oslo concurrency library
 
 License:        ASL 2.0
@@ -167,3 +167,6 @@ rm -rf .testrepository
 %endif
 
 %changelog
+* Wed Mar 23 2016 Haikel Guemar <hguemar@fedoraproject.org> 3.6.0-
+- Update to 3.6.0
+
